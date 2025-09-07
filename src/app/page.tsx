@@ -8,16 +8,6 @@ import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 
 const LandingPage: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    const checkIsMobile = () => setIsMobile(window.innerWidth <= 768);
-    checkIsMobile();
-    window.addEventListener("resize", checkIsMobile);
-    return () => window.removeEventListener("resize", checkIsMobile);
-  }, []);
-
   return (
     <section className="relative overflow-x-hidden">
       <div id="hero">
